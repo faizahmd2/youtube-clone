@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Custom Video Player</title>
+    <!-- <script src="dist/bundle.js" defer></script> -->
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="video-container paused" data-volume-level="high">
+        <img class="thumbnail-img">
+        <div class="video-controls-container">
+            <div class="timeline-container">
+                <div class="timeline">
+                    <img class="preview-image">
+                    <div class="thumb-indicator"></div>
+                </div>
+            </div>
+            <div class="controls">
+                <button class="play-pause-btn">
+                    <img class="play-icon" src="assets/icons/play-icon.png" alt="">
+                    <img class="pause-icon" src="assets/icons/pause-icon.png" alt="">
+                </button>
+                <div class="volume-container">
+                    <button class="mute-btn">
+                        <img class="volume-high" src="assets/icons/volume-high.png" alt="">
+                        <img class="volume-low" src="assets/icons/volume-low.png" alt="">
+                        <img class="volume-mute" src="assets/icons/volume-mute.png" alt="">
+                    </button>
+                    <input class="volume-slider" type="range" min="0" max="1" step="any" value="1">
+                </div>
+                <div class="duration-container">
+                    <div class="current-time">0:00</div>
+                    /
+                    <div class="total-time">0:00</div>
+                </div>
+                <button class="captions-btn">
+                    <img src="assets/icons/subtitle.png" alt="">
+                </button>
+                <button class="speed-btn wide">
+                    1x
+                </button>
+                <button class="mini-player-btn">
+                    <img class="mini-player-on" src="assets/icons/mini-player-on.png" alt="">
+                    <img class="mini-player-off" src="assets/icons/mini-player-off.png" alt="">
+                </button>
+                <button class="theater-player-btn">
+                    <img class="theater-off" src="assets/icons/theater-off.png" alt="">
+                    <img class="theater-on" src="assets/icons/theater-on.png" alt="">
+                </button>
+                <button class="full-player-btn">
+                    <img class="full-screen-on" src="assets/icons/full-screen-on.png" alt="">
+                    <img class="full-screen-off" src="assets/icons/full-screen-off.png" alt="">
+                </button>
+            </div>
+        </div>
+        <video src="assets/videos/Video.mp4">
+            <track kind="captions" srclang="en" src="assets/subtitles.vtt" >
+        </video>
+    </div>
+</body>
+</html>
